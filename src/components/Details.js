@@ -52,13 +52,17 @@ export default class Details extends Component {
 															href={liveLink}
 															target='_blank'
 															rel='noopener noreferrer'
-															disabled={
-																live ? true : false
-															}
+															disabled={live ? true : false}
 														>
-															<ButtonDark>
-																live
-															</ButtonDark>
+															{ live ? (
+																<ButtonDark>
+																	live
+																</ButtonDark>
+															) : (
+																<ButtonDark>
+																	<del>live</del>
+																</ButtonDark>
+															) }
 														</a>
 													</div>
 													{/* buttons */}
