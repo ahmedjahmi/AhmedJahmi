@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 export default class Project extends Component {
     render() {
-        const {id, title, img, technologies, live} = this.props.project;
+        const {id, title, img, technologies} = this.props.project;
         return (
 					<ProjectWrapper className='col-9 mx-auto col-md-9 col-lg-9 my-3'>
 						<div className='card'>
@@ -24,20 +24,6 @@ export default class Project extends Component {
 												className='card-img-top'
 											/>
 										</Link>
-
-										{/* this is a cart button that isn't needed
-                            but maybe useful later */}
-
-										{/* <button className="cart-btn" disabled={inCart ? true : false} onclick={()=>{console.log('added to cart');}}>
-                                {inCart? (
-                                    <p className="text-capitalize mb-0" disabled>
-                                        {" "}
-                                        in inCart
-                                    </p>
-                                ): (
-                                    <i className="fas fa-cart-plus" />
-                                )}
-                            </button> */}
 									</div>
 								)}
 							</ProjectConsumer>

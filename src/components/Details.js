@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { ProjectConsumer} from '../context';
 import {Link} from 'react-router-dom';
-import {ButtonContainer, ButtonDark} from './Button';
+import {ButtonDark} from './Button';
 
 export default class Details extends Component {
     render() {
         return (
             <ProjectConsumer>
                 {(value)=>{
-                    const {id, title, img, technologies, info, live, gitLink, liveLink} = value.detailProject;
+                    const {title, img, technologies, info, live, gitLink, liveLink} = value.detailProject;
                     return (
 											<div className='container py-5'>
 												{/* title */}
@@ -26,8 +26,8 @@ export default class Details extends Component {
 															className='img-fluid'
 														/>
 													</div>
-													<div className='col-10 mx-auto col-md-6 my-3 text-capitalize'>
-														<h2 className='text-light-jelly'>
+													<div className='col-10 mx-auto col-md-6 my-3'>
+														<h2 className='text-light-jelly text-capitalize'>
 															<span className='text-jelly'>
 																Technologies:{' '}
 															</span>
@@ -54,7 +54,7 @@ export default class Details extends Component {
 															rel='noopener noreferrer'
 															disabled={live ? true : false}
 														>
-															{ live ? (
+															{live ? (
 																<ButtonDark>
 																	live
 																</ButtonDark>
@@ -62,7 +62,7 @@ export default class Details extends Component {
 																<ButtonDark>
 																	<del>live</del>
 																</ButtonDark>
-															) }
+															)}
 														</a>
 													</div>
 													{/* buttons */}

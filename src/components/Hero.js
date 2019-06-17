@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {IconContainer} from './Icon';
 
 export default class Hero extends Component {
     render() {

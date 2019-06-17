@@ -72,9 +72,3 @@ export default class Contact extends Component {
 				);
     }
 }
-
-
-
-{/* <ButtonDark>
-	<a href={`mailto:${'amjahmi@gmail.com'}`}>email</a>
-</ButtonDark>; */}
