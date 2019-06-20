@@ -8,15 +8,15 @@ export default class HomePage extends Component {
 					<React.Fragment>
 						<div className='container'>
 							<div className='row'>
-								<div className='col-sm-12'>
+								<div className='col-12'>
 									<Hero />
 								</div>
-								<div className='col-sm-12'>
+								<div className='col-12'>
 									<hr
 										style={{ backgroundColor: 'var(--lightJelly)'}}
 									/>
 								</div>
-								<div className='col-sm-12'>
+								<div className='col-12'>
 									<DisplaySection />
 								</div>
 							</div>
