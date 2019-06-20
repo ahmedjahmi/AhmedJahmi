@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import {
 	Collapse,
@@ -43,17 +44,17 @@ export default class MainNav extends Component {
 													>
 														<Nav className='mr-auto' navbar>
 															<NavItem>
-																<NavLink href='/ProjectList'>
+																<NavLink tag={Link} to='/ProjectList'>
 																	Projects
 																</NavLink>
 															</NavItem>
 															<NavItem>
-																<NavLink href='/Resume'>
+																<NavLink tag={Link} to='/Resume'>
 																	Resume
 																</NavLink>
 															</NavItem>
 															<NavItem>
-																<NavLink href='/Contact'>
+																<NavLink tag={Link} to='/Contact'>
 																	Contact
 																</NavLink>
 															</NavItem>
