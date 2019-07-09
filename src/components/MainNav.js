@@ -71,6 +71,9 @@ const NavWrapper = styled.div`
 	i {
 		color: var(--mainWhite);
 	}
+	.navbar-toggler {
+		&:focus
+	}
   .nav-link {
     color: var(--mainWhite) !important;
     font-size: 1.2rem;

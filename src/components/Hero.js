@@ -11,7 +11,7 @@ export default class Hero extends Component {
 						>
 							<div className='container p-5'>
 								<h1 className='display-4'>Ahmed Jahmi</h1>
-								<p className='lead py-2'>Full Stack Engineer</p>
+								<p className='lead py-2'>Full-Stack Developer</p>
 								<p>Brooklyn, by way of Buffalo.</p>
 							</div>
 						</div>

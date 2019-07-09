@@ -10,66 +10,66 @@ export default class Details extends Component {
                 {(value)=>{
                     const {title, img, technologies, info, live, gitLink, liveLink} = value.detailProject;
                     return (
-											<div className='container py-5'>
-												{/* title */}
-												<div className='col-10 mx-auto text-title text-center text-jelly my-5'>
-													<h1>{title}</h1>
-												</div>
-												{/* end title */}
+						<div className='container py-5'>
+							{/* title */}
+							<div className='col-10 mx-auto text-title text-center text-jelly my-5'>
+								<h1>{title}</h1>
+							</div>
+							{/* end title */}
 
-												{/* project info */}
-												<div className='row'>
-													<div className='col-10 mx-auto col-md-6 my-3'>
-														<img
-															src={img}
-															alt='project'
-															className='img-fluid'
-														/>
-													</div>
-													<div className='col-10 mx-auto col-md-6 my-3'>
-														<h2 className='text-light-jelly text-capitalize'>
-															<span className='text-jelly'>
-																Technologies:{' '}
-															</span>
-															{technologies}
-														</h2>
-														<p>{info}</p>
-														<Link to='/projectlist'>
-															<ButtonDark>
-																back to projects
-															</ButtonDark>
-														</Link>
-														<a
-															href={gitLink}
-															target='_blank'
-															rel='noopener noreferrer'
-														>
-															<ButtonDark>
-																github
-															</ButtonDark>
-														</a>
-														<a
-															href={liveLink}
-															target='_blank'
-															rel='noopener noreferrer'
-															disabled={live ? true : false}
-														>
-															{live ? (
-																<ButtonDark>
-																	live
-																</ButtonDark>
-															) : (
-																<ButtonDark>
-																	<del>live</del>
-																</ButtonDark>
-															)}
-														</a>
-													</div>
-													{/* buttons */}
-												</div>
-												{/* end project info */}
-											</div>
-										);
+							{/* project info */}
+							<div className='row'>
+								<div className='col-10 mx-auto col-md-6 my-3'>
+									<img
+										src={img}
+										alt='project'
+										className='img-fluid'
+									/>
+								</div>
+								<div className='col-10 mx-auto col-md-6 my-3'>
+									<h2 className='text-light-jelly text-capitalize'>
+										<span className='text-jelly'>
+											Technologies:{' '}
+										</span>
+										{technologies}
+									</h2>
+									<p>{info}</p>
+									<Link to='/projectlist'>
+										<ButtonDark>
+											back to projects
+										</ButtonDark>
+									</Link>
+									<a
+										href={gitLink}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<ButtonDark>
+											github
+										</ButtonDark>
+									</a>
+									<a
+										href={liveLink}
+										target='_blank'
+										rel='noopener noreferrer'
+										disabled={live ? true : false}
+									>
+										{live ? (
+											<ButtonDark>
+												live
+											</ButtonDark>
+										) : (
+											<ButtonDark>
+												<del>live</del>
+											</ButtonDark>
+										)}
+									</a>
+								</div>
+								{/* buttons */}
+							</div>
+							{/* end project info */}
+						</div>
+					);
                 }}
             </ProjectConsumer>
         )
