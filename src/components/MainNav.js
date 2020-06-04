@@ -72,7 +72,9 @@ const NavWrapper = styled.div`
 		color: var(--mainWhite);
 	}
 	.navbar-toggler {
-		&:focus
+		&:focus {
+			
+		}
 	}
   .nav-link {
     color: var(--mainWhite) !important;
