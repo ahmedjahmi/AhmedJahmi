@@ -13,7 +13,7 @@ export default class Resume extends Component {
 									<div className='card'>
 										<div className='img-container p-2'>
 											<ResumeWrapper
-												src='img/resume-2020.png'
+												src='img/AhmedJahmi_resume.png'
 												alt='Resume'
 												className='card-img-top'
 											/>
