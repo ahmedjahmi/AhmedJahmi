@@ -9,15 +9,15 @@ export default class HomePage extends Component {
 						<div className='container'>
 							<div className='row'>
 								<div className='col-12'>
-									<Hero />
+									{/* <Hero /> */}
 								</div>
-								<div className='col-12'>
+								{/* <div className='col-12'>
 									<hr
 										style={{ backgroundColor: 'var(--lightJelly)'}}
 									/>
-								</div>
+								</div> */}
 								<div className='col-12'>
-									<DisplaySection />
+									{/* <DisplaySection /> */}
 								</div>
 							</div>
 						</div>

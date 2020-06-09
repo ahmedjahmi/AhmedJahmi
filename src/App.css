@@ -8,12 +8,13 @@
 
 body {
   font-family: 'Roboto', sans-serif !important;
-  background: var(--mainWhite) !important;
-  color: var(--mainGray) !important;
+  /* background: var(--mainWhite) !important; */
+  background: white;
+  /* color: var(--mainGray) !important; */
 }
 
 h1 {
-  color: var(--mainJelly);
+  /* color: var(--mainJelly); */
 }
 
 p {

@@ -67,9 +67,14 @@ export default class MainNav extends Component {
 								}
 
 const NavWrapper = styled.div`
-	background: var(--mainVanilla);
+	/* background: var(--mainVanilla); */
+	background-color: white;
 	i {
-		color: var(--mainWhite);
+		/* color: var(--mainWhite); */
+		color: green;
+		background-color: black;
+		padding: 5px;
+		border-radius: 3px;
 	}
 	.navbar-toggler {
 		&:focus {
@@ -77,13 +82,19 @@ const NavWrapper = styled.div`
 		}
 	}
   .nav-link {
-    color: var(--mainWhite) !important;
+	/* color: var(--mainWhite) !important; */
+	background-color: black;
+	color: green;
+	text-decoration: none;
     font-size: 1.2rem;
-    text-transform: capitalize;
+  }
+  .nav-item {
+	  /* color: green; */
+	  /* background-color: black; */
   }
   .navbar-brand {
     color: var(--mainWhite) !important;
     font-size: 1.4rem;
-    text-transform: capitalize;
+
   }
 `;
