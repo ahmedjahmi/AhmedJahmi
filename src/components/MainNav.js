@@ -50,7 +50,7 @@ export default class MainNav extends Component {
 															</NavItem>
 															<NavItem>
 																<NavLink tag={Link} to='/Resume'>
-																	Resume
+																	openResume(me.name)
 																</NavLink>
 															</NavItem>
 															<NavItem>
