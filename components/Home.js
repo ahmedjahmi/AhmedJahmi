@@ -6,13 +6,15 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button'
 import Link from './Link';
+import Typist from 'react-typist';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
-		height: '100vh',
-		marginTop: '33vh',
-		marginBottom: '33vh',
+		fontSize: 12,
+	},
+	item: {
+		margin: theme.spacing(2),
 	},
 	button: {
 		margin: theme.spacing(1),
@@ -21,102 +23,114 @@ const useStyles = makeStyles((theme) => ({
 		color: 'green',
 	},
 	card: {
-		paddingTop: theme.spacing(1),
-		paddingBottom: theme.spacing(2),
-		paddingRight: theme.spacing(2),
-		paddingLeft: theme.spacing(2),
+		// paddingTop: theme.spacing(1),
+		// paddingBottom: theme.spacing(2),
+		// paddingRight: theme.spacing(2),
+		// paddingLeft: theme.spacing(2),
+		maxWidth: '800px',
+		padding: theme.spacing(3),
 		backgroundColor: 'black',
 		color: 'green',
 	},
+	link: {
+		color: 'green',
+		textDecoration: 'none',
+	},
+	cursor: {
+		backgroundColor: 'green',
+		width: '10px',
+		height: '15px',
+	}
 }));
 
 const Home = (props) => {
 	const classes = useStyles();
+	const cursorOptions = {
+		show: true,
+		blink: true,
+		element: '|',
+		hideWhenDone: false,
+		hideWhenDoneDelay: 1000,
+	};
 	return (
 		<div className={classes.root}>
-			<Grid container spacing={2}>
+			<Grid container>
 				<Grid item xs={12}>
 					<Grid
 						container
 						direction='column'
 						justify='center'
 						alignItems='center'
+						alignContent='space-around'
 					>
-						<Grid item>
+						<Grid item xs={12} className={classes.item}>
 							<Card className={classes.card}>
-								<Typography variant='h5' component='h1' align='center'>
+								<Typography variant='body1' component='p'>
 									<code>
-										let me = {'{'}"name": "Ahmed Jahmi"{'}'}
+										<Typist avgTypingDelay={100} startDelay={250} cursor={cursorOptions} >
+											let me = {'{'}name: "Ahmed"{'}'}
+											<br />
+											<br />
+											me.title = "Software Engineer"
+											<br />
+											<br />
+											me.resume = "/resume.png"
+											<br />
+											<br />
+											me.github = "https://github.com/ahmedjahmi"
+											<br />
+											<br />
+											me.email = "amjahmi@gmail.com"
+										</Typist>
 									</code>
 								</Typography>
-								<Typography variant='h6' component='h2' align='center'>
-									<code>me.title = "Software Engineer"</code>
-								</Typography>
-								<Typography variant='h6' component='h2' align='center'>
-									<code>me.projects = "https://github.com/ahmedjahmi"</code>
-								</Typography>
-								<Typography variant='h6' component='h2' align='center'>
-									<code>me.email = "amjahmi@gmail.com"</code>
-								</Typography>
-								<Typography variant='h6' component='h2' align='center'>
-									<code>me.twitter = "https://twitter.com/JahmiAmor"</code>
-								</Typography>
-
 							</Card>
 						</Grid>
 						<Grid item>
-							<Link href='/resume'>
+							<Link className={classes.link} href='/resume'>
 								<Button
 									className={classes.button}
 									variant='outlined'
 									disableElevation
 									size='large'
 								>
-									<code style={{ textTransform: 'none' }}>
-										openResume(me.name)
-									</code>
+									<code style={{ textTransform: 'none' }}>open(me.resume)</code>
 								</Button>
 							</Link>
 						</Grid>
 						<Grid item>
-							<Link href='/'>
-							</Link>
-							<Button
-								className={classes.button}
-								variant='outlined'
-								disableElevation
-								size='large'
+							<a
+								className={classes.link}
+								href='https://github.com/ahmedjahmi'
+								target='_blank'
+								rel='noopener noreferrer'
 							>
-								<code style={{ textTransform: 'none' }}>
-									openGithub(me.projects)
-								</code>
-							</Button>
+								<Button
+									className={classes.button}
+									variant='outlined'
+									disableElevation
+									size='large'
+								>
+									<code style={{ textTransform: 'none' }}>open(me.github)</code>
+								</Button>
+							</a>
 						</Grid>
 						<Grid item>
-							<Link href='/'>
-							</Link>
-							<Button
-								className={classes.button}
-								variant='outlined'
-								disableElevation
-								size='large'
+							<a
+								className={classes.link}
+								href='mailto:amjahmi@gmail.com'
+								target='_blank'
+								rel='noopener noreferrer'
 							>
-								<code style={{ textTransform: 'none' }}>
-									sendEmail(me.email)
-								</code>
-							</Button>
-						</Grid>
-						<Grid item>
-							<Button
-								className={classes.button}
-								variant='outlined'
-								disableElevation
-								size='large'
-							>
-								<code style={{ textTransform: 'none' }}>
-									openTwitter(me.twitter)
-								</code>
-							</Button>
+								<Button
+									className={classes.button}
+									variant='outlined'
+									disableElevation
+									size='large'
+								>
+									<code style={{ textTransform: 'none' }}>send(me.email)</code>
+								</Button>
+							</a>
 						</Grid>
 					</Grid>
 				</Grid>

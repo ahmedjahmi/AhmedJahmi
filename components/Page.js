@@ -11,7 +11,7 @@ const Page = (props) => {
 				<Meta />
 			</Head>
 			<Header />
-			<Container>{props.children}</Container>
+			<Container maxWidth='md'>{props.children}</Container>
 		</>
 	);
 };

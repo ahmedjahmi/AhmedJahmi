@@ -18,6 +18,9 @@ const Meta = () => (
 			rel='stylesheet'
 			href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
 		/>
+		<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
+		<link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet" />
+		<link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
 		<title>Ahmed Jahmi</title>
 	</Head>
 );
