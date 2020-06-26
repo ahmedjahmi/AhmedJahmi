@@ -23,10 +23,6 @@ const useStyles = makeStyles((theme) => ({
 		color: 'green',
 	},
 	card: {
-		// paddingTop: theme.spacing(1),
-		// paddingBottom: theme.spacing(2),
-		// paddingRight: theme.spacing(2),
-		// paddingLeft: theme.spacing(2),
 		maxWidth: '800px',
 		padding: theme.spacing(3),
 		backgroundColor: 'black',
@@ -36,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
 		color: 'green',
 		textDecoration: 'none',
 	},
-	cursor: {
-		backgroundColor: 'green',
-		width: '10px',
-		height: '15px',
-	}
+	// cursor: {
+	// 	backgroundColor: 'green',
+	// 	width: '10px',
+	// 	height: '15px',
+	// }
 }));
 
 const Home = (props) => {
@@ -48,7 +44,7 @@ const Home = (props) => {
 	const cursorOptions = {
 		show: true,
 		blink: true,
-		element: '|',
+		element: '',
 		hideWhenDone: false,
 		hideWhenDoneDelay: 1000,
 	};
@@ -56,6 +52,7 @@ const Home = (props) => {
 		<div className={classes.root}>
 			<Grid container>
 				<Grid item xs={12}>
+					<Typist avgTypingDelay={100} startDelay={250} cursor={cursorOptions} >
 					<Grid
 						container
 						direction='column'
@@ -67,7 +64,6 @@ const Home = (props) => {
 							<Card className={classes.card}>
 								<Typography variant='body1' component='p'>
 									<code>
-										<Typist avgTypingDelay={100} startDelay={250} cursor={cursorOptions} >
 											let me = {'{'}name: "Ahmed"{'}'}
 											<br />
 											<br />
@@ -81,7 +77,6 @@ const Home = (props) => {
 											<br />
 											<br />
 											me.email = "amjahmi@gmail.com"
-										</Typist>
 									</code>
 								</Typography>
 							</Card>
@@ -93,7 +88,7 @@ const Home = (props) => {
 									variant='outlined'
 									disableElevation
 									size='large'
-								>
+									>
 									<code style={{ textTransform: 'none' }}>open(me.resume)</code>
 								</Button>
 							</Link>
@@ -104,7 +99,7 @@ const Home = (props) => {
 								href='https://github.com/ahmedjahmi'
 								target='_blank'
 								rel='noopener noreferrer'
-							>
+								>
 								<Button
 									className={classes.button}
 									variant='outlined'
@@ -121,18 +116,19 @@ const Home = (props) => {
 								href='mailto:amjahmi@gmail.com'
 								target='_blank'
 								rel='noopener noreferrer'
-							>
+								>
 								<Button
 									className={classes.button}
 									variant='outlined'
 									disableElevation
 									size='large'
-								>
+									>
 									<code style={{ textTransform: 'none' }}>send(me.email)</code>
 								</Button>
 							</a>
 						</Grid>
 					</Grid>
+									</Typist>
 				</Grid>
 			</Grid>
 		</div>

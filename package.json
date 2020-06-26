@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
     "clsx": "latest",
     "next": "9.4.4",
+    "next-on-netlify": "^2.3.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-typist": "^2.0.5"
