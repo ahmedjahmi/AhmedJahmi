@@ -52,8 +52,9 @@ const Home = (props) => {
 		<div className={classes.root}>
 			<Grid container>
 				<Grid item xs={12}>
-					<Link className={classes.skip} href='/home'>Skip animation? click here</Link>
-
+						<Link className={classes.skip} href='/home'>
+							(Skip animation)
+						</Link>
 					<Grid
 						container
 						direction='column'
@@ -85,27 +86,35 @@ const Home = (props) => {
 											me.email = "amjahmi@gmail.com"
 										</code>
 									</Typography>
-									</Typist>
-								</Card>
-							</Grid>
-							<Grid item>
-								<Typist avgTypingDelay={50} startDelay={9500} cursor={cursorOptions} >
+								</Typist>
+							</Card>
+						</Grid>
+						<Grid item>
+							<Typist
+								avgTypingDelay={50}
+								startDelay={9500}
+								cursor={cursorOptions}
+							>
 								<Link className={classes.link} href='/resume'>
 									<Button
 										className={classes.button}
 										variant='outlined'
 										disableElevation
 										size='large'
-										>
+									>
 										<code style={{ textTransform: 'none' }}>
 											open(me.resume)
 										</code>
 									</Button>
 								</Link>
-								</Typist>
-							</Grid>
-							<Grid item>
-								<Typist avgTypingDelay={50} startDelay={10400} cursor={cursorOptions} >
+							</Typist>
+						</Grid>
+						<Grid item>
+							<Typist
+								avgTypingDelay={50}
+								startDelay={10400}
+								cursor={cursorOptions}
+							>
 								<a
 									className={classes.link}
 									href='https://github.com/ahmedjahmi'
@@ -123,30 +132,34 @@ const Home = (props) => {
 										</code>
 									</Button>
 								</a>
-								</Typist>
-							</Grid>
-							<Grid item>
-								<Typist avgTypingDelay={50} startDelay={11400} cursor={cursorOptions} >
-									<a
-										className={classes.link}
-										href='mailto:amjahmi@gmail.com'
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										<Button
-											className={classes.button}
-											variant='outlined'
-											disableElevation
-											size='large'
-										>
-											<code style={{ textTransform: 'none' }}>
-												send(me.email)
-											</code>
-										</Button>
-									</a>
-								</Typist>
-							</Grid>
+							</Typist>
 						</Grid>
+						<Grid item>
+							<Typist
+								avgTypingDelay={50}
+								startDelay={11400}
+								cursor={cursorOptions}
+							>
+								<a
+									className={classes.link}
+									href='mailto:amjahmi@gmail.com'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<Button
+										className={classes.button}
+										variant='outlined'
+										disableElevation
+										size='large'
+									>
+										<code style={{ textTransform: 'none' }}>
+											send(me.email)
+										</code>
+									</Button>
+								</a>
+							</Typist>
+						</Grid>
+					</Grid>
 				</Grid>
 			</Grid>
 		</div>
