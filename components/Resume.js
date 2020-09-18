@@ -39,7 +39,7 @@ const Resume = (props) => {
 							alignItems='flex-start'
 						>
 							<Grid item xs={6} md={3}>
-								<Link href='/'>
+								<Link href='/home'>
 									<Button variant='text' disableElevation>
 										<ChevronLeftIcon className={classes.chevron} />
 									</Button>

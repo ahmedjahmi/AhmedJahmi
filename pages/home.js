@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Home from '../components/Home';
+import HomeAfterLoad from '../components/HomeAfterLoad';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-    flexGrow: 1,
+		flexGrow: 1,
 	},
 }));
 
-const Index = (props) => {
+const HomePage = (props) => {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-			<Home />
+			<HomeAfterLoad />
 		</div>
 	);
 };
 
-export default Index;
+export default HomePage;

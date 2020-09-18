@@ -32,7 +32,7 @@ class MyApp extends App {
 		return (
 			<React.Fragment>
 				<Head>
-					<title>My Page</title>
+					<title>Ahmed Jahmi</title>
 				</Head>
 				<ThemeProvider theme={theme}>
 					<CssBaseline />
